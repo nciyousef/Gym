@@ -1,0 +1,50 @@
+/*----------GENERAL----------*/
+#column_container 
+{
+    display: -webkit-flex;
+    display: flex;
+    margin: 1em 1em 0 1em;
+    padding: 1em;
+}
+
+#column_container section 
+{
+    -webkit-flex: 1;
+    flex: 1;
+    padding-right: 4em;
+}
+
+#column_container section p 
+{
+    text-align: justify;	
+}
+
+aside 
+{
+    border-radius: 10px;
+    padding: 0 0.5em 0.5em 0.5em;
+    width: 18em;
+    height: 22em;
+}
+
+h1
+{
+    color: black;
+    text-align: center;
+}
+
+a 
+{
+    color: blue;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.logo 
+{
+    float: left;
+    padding-right: 0.5em;
+    width: 220px;
+    height: 90px;
+}
+/*----------END----------*/

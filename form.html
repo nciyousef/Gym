@@ -1,0 +1,246 @@
+<!DOCTYPE html >
+<html lang="en">
+    <head>
+        <meta charset= "utf-8">
+        <title>Membership Form</title>
+        <!--************CONFIRMATION JAVASCRIPT************-->
+        <script type="text/javascript">
+        //fields validation method
+            function validate()
+            {
+                var password = document.getElementById("password").value;
+                var password2 = document.getElementById("password2").value;
+                var ok = true;
+                if (password !== password2)
+                {
+                    alert("!! ATTENTION !! Password and confirm Password Do not match, please check spelling and Caps-lock off");
+                    ok = false;
+                }
+                else if (document.myForm.name.value === "" || document.myForm.phone.value === "" || document.myForm.birth.value === "" ||
+                        document.myForm.password.value === "" || document.myForm.password2.value === "" || document.myForm.address.value === "")
+                {
+                    alert("!! ATTENTION !! Please fill in all required fields!");
+                    return false;
+                }
+                else
+                {
+                    alert("!!! FORM SENT SUCCESSFULLY !!! Thank you for joining our fitness club, we will send you confirmation by email");
+                }
+                return ok;
+            }//end method
+        </script>
+        <!--************END CONFIRMATION JAVASCRIPT************-->
+        <!--************CONFIRMATION PASSWORD************-->
+        <script type="text/javascript">
+
+        </script>
+        <!--************END CONFIRMATION PASSWORD************-->
+        <!--************CSS************-->
+        <style> @import "css/form.css"; </style>
+        <style> @import "css/nav.css"; </style>
+        <style> @import "css/layout.css"; </style>
+        <!--************END CSS************-->
+        <meta name ="viewport" content="width=device-width, initial-scale = 1.0" />
+    </head>
+    <!--************BODY************-->
+    <body>
+        <!--************HEADER************-->
+        <header>
+            <img src="images/gymheader.jpg" alt="picture of club">
+        </header>
+        <!--************END HEADER************-->
+        <!--************NAV LIST************-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shopping.html">Shop</a></li>
+                <li><a href="form.html" class="current_page">Membership</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!--************END NAV LIST************-->
+        <!--************FORM************-->
+        <form action = "mailto:mahmoud.yousef@student.ncirl.ie" method = "post" oninput="x.value=parseInt(a.value)" name="myForm">
+            <h2>Complete this form and press the send button</h2>
+            <!--************PERSONAL DETAILS************-->
+            <fieldset>
+                <legend>Personal Details</legend>
+                <!--************NAME************-->
+                <label for = "name">Name:</label>
+                <input type="text" name="name" id="name" required placeholder = "Enter your name" autofocus><br>
+                <label for = "phone">Phone number:</label>
+                <input type="tel" pattern = "\d{10}"
+                       title = "Phone(Format:9999999999)" id="phone" name="phone" required placeholder = "Enter phone number" autofocus><br>
+                <label for = "birthday">Date of birth:</label><input type="date" name="birth" id="birthday" required>
+                <br>
+                <label for = "password">Password:</label>
+                <input type="password" size="20" maxlength="20" name="password" id="password" required placeholder = "Enter password" autofocus><br>
+                <label for = "password2">Reenter Password:</label>
+                <input type="password" name="password" id="password2" required placeholder = "Confirm password" autofocus onkeyup="checkPass();
+        		return false;">
+                <br>
+                <label for = "adress">Address:</label><input type="text" name="address" id="adress" required placeholder = "Enter your address" autofocus>
+                <br>
+                <!--************BREAK************-->
+                <!--************EMAIL************-->
+                <label for = "useremail">Email:</label><input type="email" name="email" id="useremail" required placeholder = "Enter your Email" autofocus>
+                <br>
+                <label>Gender:</label>
+                <input type="radio" name="gender" value = "male" id="male" required>Male
+                <input type="radio" name="gender" value = "female" id="female" required>Female
+                <br>
+            </fieldset>
+            <br>
+            <!--************END PERSONAL DETAILS************-->
+            <!--************HEALTH CONDITION************-->
+            <fieldset>
+                <legend>Health/Physical Condition</legend>
+                <select name="health" size = "1">
+                    <option value="choice">Select</option>
+                    <option value="email">Unfit</option>
+                    <option value="post">Fit</option>
+                    <option value="text">Healthy</option>
+                    <option value="text">Unwell</option>
+                    <option value="text">Overweight</option>
+                </select>
+                <br>
+                Your selection on a scale of 1 to 10 :
+                <input type="range" name="a" min = "1" max = "10">
+                <output name="x"></output>
+            </fieldset>
+            <br>
+            <!--************END HEALTH CONDITION************-->
+            <!--************MEMBERSHIP************-->
+            <fieldset>
+                <legend>Membership</legend>
+                <!--************MEMBER ROWS************-->
+                <!--************MEMBER ROW 1************-->
+                <strong>Category :</strong>
+                <input type="radio" name="category" id="student" value="student">
+                <span class = "radio">Student</span>
+                <input type="radio" name="category" id="adult" value="adult">
+                <span class = "radio">Adult</span>
+                <input type="radio" name="category" id="senior" value="senior">
+                <span class = "radio">Senior</span>
+                <input type="radio" name="category" id="offpeak" value="off-peak">
+                <span class = "radio">Off-peak</span>
+                <br>
+                <!--************END MEMBER ROW 1************-->
+                <!--************MEMBER ROW 2************-->
+                <strong>Term/mth:</strong>
+                <input type="radio" name="term" id="three" value="3months">
+                <span class = "radio">3 months</span>
+                <input type="radio" name="term" id="six" value="6months">
+                <span class = "radio">6 months</span>
+                <input type="radio" name="term" id="nine" value="9months">
+                <span class = "radio">9 months</span>
+                <input type="radio" name="term" id="twelve" value="12months">
+                <span class = "radio">12 months</span>
+                <!--************END MEMBER ROW 2************-->
+                <!--************END MEMBER ROWS************-->
+            </fieldset>
+            <br>
+            <!--************END MEMBERSHIP************-->
+            <!--************EXERCISE AIMS************-->
+            <fieldset>
+                <legend>Exercise Aims</legend>
+                <!--************EXERCISE ROWS************-->
+                <!--************EXERCISE ROW 1************-->
+                <input type="checkbox" name="health" value = "health" >
+                <span class = "box">Health</span>
+                <input type="checkbox" name="energy" value = "energy" >
+                <span class = "box">Energy</span>
+                <input type="checkbox" name="fitness" value = "fitness" >
+                <span class = "box">Fitness</span>
+                <br>
+                <!--************END EXERCISE ROW1************-->
+                <!--************EXERCISE ROW 2************-->
+                <input type="checkbox" name="toning" value = "toning" >
+                <span class = "box">Toning</span>
+                <input type="checkbox" name="weightloss" value = "weightloss" >
+                <span class = "box">Weight Loss</span>
+                <input type="checkbox" name="rehab" value = "rehab" >
+                <span class = "box">Rehabilitation</span>
+                <!--************END EXERCISE ROW 2************-->
+                <!--************END EXERCISE ROWS************-->
+            </fieldset>
+            <br>
+            <!--************END EXERCISE AIMS************-->
+            <!--************SEVICES************-->
+            <fieldset>
+                <legend>Interested in other services?</legend>
+                <!--************SERVICES ROWS************-->
+                <!--************SERVICES ROW 1************-->
+                <input type="checkbox" name="none" value = "none" >
+                <span class = "box">None</span>
+                <input type="checkbox" name="massage" value = "massage" >
+                <span class = "box">Massage</span>
+                <input type="checkbox" name="ptraining" value = "ptraining" >
+                <span class = "box">Personal Training</span>
+                <br>
+                <!--************END SERVICES ROW 1************-->
+                <!--************SERVICES ROW 2************-->
+                <input type="checkbox" name="sberry" value = "sberry" >
+                <span class = "box">Nutrition</span>
+                <input type="checkbox" name="fitclasses" value = "fitclasses" >
+                <span class = "box">Fitness Classes</span>
+                <input type="checkbox" name="stroom" value = "stroom" >
+                <span class = "box">Steam Room</span>
+                <!--************END SERVICES ROW 2************-->
+                <!--************END SERVICES ROWS************-->
+            </fieldset>
+            <br>
+            <!--************END SERVICES************-->
+            <!--************OTHERS************-->
+            <fieldset>
+                <legend>Other details</legend>
+                <textarea rows="3" cols="50" name="comments" id = "textarea">
+                </textarea>
+            </fieldset>
+            <br>
+            <!--************END OTHERS************-->
+            <!--************PHOTO************-->
+            <fieldset>
+                <legend>Upload a photo of yourself</legend>
+                Click the Button to upload your photo:
+                <input type="file" name="uploadfile">
+            </fieldset>
+            <br>
+            <!--************END PHOTO************-->
+            <!--************PAYMENT METHODS************-->
+            <fieldset>
+                <legend>Payment Methods</legend>
+                <input type="radio" name="payment" id="visa" value="visa">
+                <span class = "radio"><img src="images/visa.jpg" alt="visa"></span>
+                <input type="radio" name="payment" id="mastercard" value="mastercard">
+                <span class = "radio"><img src="images/mastercard.jpg" alt="mastercard"></span>
+                <input type="radio" name="payment" id="paypal" value="paypal">
+                <span class = "radio"><img src="images/paypal.jpg" alt="paypal"></span>
+            </fieldset>
+            <!--************END PAYMENT METHODS************-->
+            <!--************SEND AND RESET BUTTONS************-->
+            <div id = "buttons">
+                <input type="submit" value="Send" id="submit" onclick="validate();">
+                <input type = "reset" value="Clear" id="reset">
+            </div>
+            <!--************END SEND AND RESET BUTTONS************-->
+        </form>
+        <!--************END FORM************-->
+        <!--************FOOTER************-->
+        <footer>
+            <section>
+                <b>Copyright &copy; <font color=blue>NCI hdcloud group 15 Ltd</font></b>
+            </section>
+            <section class="center">
+                <b>Email: <a href="mailto:mahmoud.yousef@student.ncirl.ie">group15@student.ncirl.ie</a></b>
+            </section>
+            <section class="right">
+                <b><em>Tel: <font color=blue>+353 123456789</font></em></b>
+            </section>
+        </footer>
+        <!--************END FOOTER************-->
+    </body>
+    <!--************END BODY************-->
+</html>
+<!--************END PAGE************-->

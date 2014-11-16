@@ -1,0 +1,70 @@
+/*----------NAV LAYOUT----------*/
+nav
+{
+
+    margin-top:-3px;
+    margin-right: 10em;
+    margin-left: 10em;
+    margin-bottom:-15px;
+}
+
+nav ul 
+{
+    display: -webkit-flex;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav li 
+{
+    -webkit-flex: 1 0 10em;
+    flex: 1 0 10em;
+}
+
+nav ul li 
+{
+    -webkit-flex: 1;
+    flex: 1;
+    border: 1px black;
+}
+
+nav ul a 
+{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14pt;
+    font-family: Papyrus, fantasy;
+}
+
+nav li a 
+{
+    display: block;
+    text-align: center;
+    background-color: black;
+    padding: 0.1em;
+    border-style: outset;
+    border-radius: .5em;
+}
+
+nav a:hover 
+{
+    color: black;
+    background-color: lightgreen;
+}
+
+nav a.current_page 
+{
+    color: black;
+    background-color: lightgrey;
+}
+
+#home nav a 
+{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+/*----------END----------*/
