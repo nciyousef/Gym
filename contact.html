@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact Us</title>
+        <script type="text/javascript">
+            function validate()
+            {
+                var ok = true;
+                if (document.myForm.name.value === "" || document.myForm.useremail.value === "" || document.myForm.textarea.value === "")
+                {
+                    alert("!! ATTENTION !! Please fill in all required fields!");
+                    return false;
+                }
+                else
+                {
+                    alert("!!! FORM SENT SUCCESSFULLY !!! We will respond to you within 24 hours");
+                }
+                return ok;
+            }//end method
+        </script>
+        <!--************CSS************-->
+        <style> @import "css/nav.css"; </style>
+        <style> @import "css/layout.css"; </style>
+        <style> @import "css/contact.css"; </style>
+        <!--************END CSS************-->
+        <meta name ="viewport" content="width=device-width, initial-scale = 1.0"/>
+    </head>
+    <body>
+        <!--************HEADER************-->
+        <header>
+            <img src="images/gymheader.jpg" alt="picture of club">
+        </header>
+        <!--************END HEADER************-->
+        <!--************NAV LIST************-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shopping.html">Shop</a></li>
+                <li><a href="form.html">Membership</a></li>
+                <li><a href="contact.html" class="current_page">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!--************END NAV LIST************-->
+        <!--************COLUMN CONTAINER************-->
+        <div id="column_container">
+            <!--************SECTION1************-->
+            <section>
+                <!--************TABLE************-->
+                <div class="schedule">
+                    <table>
+                        <tr>
+                            <th rowspan = "3" class ="opening">Opening<br>Hours</th>
+                            <th colspan = "2" class="days">Days of the week schedule</th>
+                        </tr>
+                        <tr>
+                            <td class ="weekday">Monday - Friday</td>
+                            <td class ="helg">Saturday - Sunday</td>
+                        </tr>
+                        <tr>
+                            <td class ="weekday">10AM - 10PM</td>
+                            <td class ="helg">9AM - 12PM</td>
+                        </tr>
+                    </table>
+                </div>
+                <!--************END TABLE************-->
+                <h2>Contact Us</h2>
+                <!--************FORM************-->
+                <form action = "mailto:mahmoud.yousef@student.ncirl.ie" method = "post" oninput="x.value=parseInt(a.value)" name="myForm">
+                    <fieldset>
+                        <legend style="color: blue"><b>Fill the form and click send</b></legend>
+                        <label for = "name">Name:</label>
+                        <input type="text" name="name" id="name" required placeholder = "Enter your name" autofocus><br><br>
+                        <label for = "useremail">Email:</label>
+                        <input type="email" name="email" id="useremail" required placeholder = "Enter your Email" autofocus><br><br>
+                        Where did hear about us:<br>
+                        <input type="radio" name="category" id="google" value="google" required>
+                        <span class = "radio"><em>Google</em></span>
+                        <input type="radio" name="category" id="news" value="news" required>
+                        <span class = "radio"><em>Newspaper</em></span>
+                        <input type="radio" name="category" id="other" value="other" required>
+                        <span class = "radio"><em>Other</em></span>
+                        <br><br>
+                        Comments:<br>
+                        <textarea rows="8" cols="70" name="comments" id = "textarea" required>
+                        </textarea>
+                    </fieldset>
+                    <!--************SEND AND RESET BUTTONS************-->
+                    <div id = "buttons">
+                        <input type="submit" value="Send" id="submit" onclick="validate();">
+                        <input type = "reset" value="Clear" id="reset">
+                    </div>
+                    <!--************END SEND AND RESET BUTTONS************-->
+                </form>
+                <!--************END FORM************-->
+            </section>
+            <!--************END SECTION1************-->
+            <!--************ASIDE************-->
+            <aside>
+                <!-- YouTube -->
+                <iframe width="300" height="200"
+                        src="http://www.youtube.com/embed/NQ1ImJCFTw0" frameborder="0" allowfullscreen>
+                </iframe>
+                <!-- End of Youtube -->
+                <!-- MAP -->
+                <h3>Our location</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.66772244618!2d-6.243268000000015!3d53.34920399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e8ce189d7ad%3A0xfb425eb58d37ded4!2sMayor+Square+-+NCI!5e0!3m2!1sen!2sie!4v1414516230556" width="300" height="200" frameborder="0" style="border:0">
+                </iframe>
+                <!-- End of MAP -->
+            </aside>
+            <!--************END ASIDE************-->
+        </div>
+        <!--************END COLUMN CONTAINER************-->
+        <!--************FOOTER************-->
+        <footer>
+            <section>
+                <b>Copyright &copy; <font color=blue>NCI hdcloud group 15 Ltd</font></b>
+            </section>
+            <section class="center">
+                <b>Email: <a href="mailto:mahmoud.yousef@student.ncirl.ie">group15@student.ncirl.ie</a></b>
+            </section>
+            <section class="right">
+                <b><em>Tel: <font color=blue>+353 123456789</font></em></b>
+            </section>
+        </footer>
+        <!--************END FOOTER************-->
+    </body>
+</html>
+<!--************END PAGE************-->

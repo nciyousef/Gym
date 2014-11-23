@@ -1,0 +1,24 @@
+/*----------IMAGES----------*/
+.gallery
+{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.pic img
+{
+    text-align: center;
+    border: 1px dashed black;
+    padding: .5em;
+    margin-left: 7.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    width: 250px;
+    height: 150px;
+    border: 1px solid white;
+    border-radius: 1em;
+}
+/*----------END----------*/

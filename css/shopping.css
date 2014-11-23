@@ -1,0 +1,93 @@
+/*----------FORM----------*/
+form
+{
+    width: 58em;
+    border: 2px solid black;
+    margin-left: 10em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    padding: 0 1em 1em 1em;
+}
+/*----------H2----------*/
+h2
+{
+    text-align: center;
+    font-family: serif;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-decoration: underline;
+}
+/*----------TABLE----------*/
+table
+{
+    border-collapse: collapse;
+    width: 90%;
+    color: black;
+    margin-left: 2.6em;
+}
+
+th
+{
+    border: 1px solid black;
+    padding: 5px;
+    //background-color: olive;
+    font-size: 140%;
+    text-decoration: underline;
+
+}
+
+td
+{
+    border: 1px solid black;
+    padding:4px;
+    text-align: center;
+    font-weight:bold;
+}
+
+.items
+{
+    text-align: left;
+    padding-left: 2em;
+    //valign: middle;
+    //valign="middle";
+    //vertical-align: top;
+}
+
+.items .textrow
+{
+    vertical-align: middle;
+    //text-align:center; 
+}
+
+.items img
+{
+    width: 80px;
+    height: 56px;
+    border: 1px solid black;
+}
+
+strong
+{
+    font-weight:bold;
+    font-size: 130%;
+    text-decoration: underline;
+}
+
+/*----------BUTTONS----------*/
+#buttons
+{
+    margin-left: 22em;
+    color: white;
+}
+
+#submit, #reset
+{ 
+    background-color: grey;
+    color: white;
+    margin-right: 20px;
+    width: 120px;
+    height: 2em;
+    border: 2px solid black;
+    font-size: 100%;	
+    font-weight: bold;
+}
+/*----------END----------*/
